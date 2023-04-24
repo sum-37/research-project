@@ -24,7 +24,7 @@ body{
     height: 200px;
     margin: 30px;
     border-radius: 50%;
-    position: absolute;
+    position: relative;
     display: inline-block;
     overflow: hidden;
     background: white;
