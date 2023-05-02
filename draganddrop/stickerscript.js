@@ -1,5 +1,7 @@
+gsap.registerPlugin(Draggable);
+
 Draggable.create(".img", {
-  edgeResistance: 1.3,
-  type: "x,y",
-  autoScroll: true
-});
+  onRelease() {
+    console.log("x", this.x, "y", this.y);
+  }
+})
