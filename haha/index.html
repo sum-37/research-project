@@ -1,0 +1,65 @@
+<html>
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B8WEC38L44"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-B8WEC38L44');
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+  .img {
+    position: absolute;
+    width: 30%;
+    height: auto;
+    background-color: transparent;
+  }
+</style>
+</head>
+
+<body>
+
+    <div id="bg-container" style="width: 100%; height: 100%;background-color: white;margin: 10px;">
+        
+        <img class="img" src="images/image-1.PNG" height="30%" width="30%">
+        <img class="img" src="images/image-2.PNG" height="30%" width="30%">
+        <img class="img" src="images/image-3.PNG" height="30%" width="30%">
+        <img class="img" src="images/image-4.PNG" height="30%" width="30%">
+        <img class="img" src="images/shape-1.PNG" height="30%" width="30%">
+        <img class="img" src="images/shape-2.PNG" height="30%" width="30%">
+        <img class="img" src="images/txt-1.PNG" height="30%" width="30%">
+        
+    </div>
+
+
+    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.8.21/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <script>
+        var zIndex = 1;
+        $('.img').draggable({
+            scroll: false,
+            containment: "#bg-container",
+            
+            start: function( event, ui ) {
+                console.log("start top is :" + ui.position.top)
+                console.log("start left is :" + ui.position.left)
+                $(this).css('zIndex', ++zIndex);
+            },
+            drag: function(event, ui) {
+                console.log('dragging.....');    
+            },
+            stop: function( event, ui ) {
+                console.log("stop top is :" + ui.position.top)
+                console.log("stop left is :" + ui.position.left)
+            }    
+        });
+    </script>
+</body>
+</html>
